@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+  
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  
+  <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+  
+  
+  <style>
+	
+  .bar {
+		fill: #5f89ad;
+	}
+	
+	.axis {
+		font-size: 11px;
+	}
+	
+	.axis.y path,
+	.axis.y line {
+		fill: none;
+		display: none;
+	}
+	
+	.label {
+		font-size: 13px;
+	}
+	
+	
+	.text-center{
+		text-align:center;
+	}
+	
+	.x-axis-p{
+		margin-top:10px;
+		font-weight:bold;
+		font-size:14px;
+		display:none;
+	}
+	
+	.loadingGif{
+		position:absolute;
+		top:35%;
+		
+	}
+	
+	.axis path, .axis line {
+		fill:none;
+		stroke: #000;
+		shape-rendering: crispEdges;
+	}
+	
+	path {
+		stroke-width: 2;
+		fill: none;
+	}
+		
+	.bar {
+	  fill: #0088cc;
+	  cursor:pointer;
+	}
+	
+	.bar:hover {
+	  fill: #007DBC;
+	}
+	
+	.axis--x path {
+	}
+	
+	
+	div.tooltip {	
+		position: absolute;			
+		text-align: center;								
+		padding: 10px;				
+		font-size: 12px;		
+		background:#fff;	
+		color:#555;
+		border: 1px solid #eee;		
+		border-radius: 3px;			
+		pointer-events: none;
+		box-shadow:1px 1px 1px #ddd;			
+	}
+
+	.legend_tip {
+		position: absolute;
+		font-size: 14px;
+		pointer-events: none;
+		background: #000;
+		color: #fff;
+		padding: 10px;
+		border-radius: 3px;
+		cursor: pointer;
+	}
+	
+	
+	.d3-tip.n {
+		display: block;
+		margin-right: 10px;
+		background: #000;
+		padding: 10px;
+		max-width: 100%;
+		border-radius: 10px;
+		cursor: pointer;
+		-webkit-transition: 0.1s all;
+		transition: 0.1s all;
+	}
+	
+	.glyphicon-arrow-div{
+		position:absolute;
+		right:30px;
+		bottom:10px;
+		font-size:36px;
+		color:#0088cc;
+		cursor:pointer;
+		transition:0.15s all;
+	}
+	
+	.glyphicon-arrow-div:hover{
+		font-size:42px;
+	}
+	
+  </style>
+    
+    
+</head>
+
+<body>
+ 
+ 	
+   	<div class="container-fluid">
+
+        <ul class="pagination">
+          <li><a href="bargraph2.html">1</a></li>
+          <li><a href="treemap.html">2</a></li>
+          <li><a href="linegraph.html">3</a></li>
+          <li class="active"><a href="heatmap.html">4</a></li>
+          <li><a href="bargraph1.html">5</a></li>
+        </ul>
+
+	</div>
+    
+    <h2 class="text-center" style="margin-top:-10px;">Crimes in different districts of Baltimore</h2>
+    
+ 	<center><img src="img/loading2.gif" width="100" class="loadingGif"></center>
+     
+	<div style="margin-top:20px;">
+    	
+       	<center> 
+        
+          <div class="placeSvg">
+          		<svg width="960" height="500"></svg>
+          </div>
+		
+        </center>
+        
+        
+    
+    </div>
+        
+    <div class="glyphicon-arrow-div">    
+    	<a href="bargraph1.html"><span class="glyphicon glyphicon-arrow-down"></span></a>
+    </div>
+    
+	<p class="text-center x-axis-p">Number of Total Incidents</p>
+
+    <script src="js/heatMap.js"></script>
+  
+</body>

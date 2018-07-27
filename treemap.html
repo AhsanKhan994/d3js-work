@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+<meta charset="utf-8">
+
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    <!-- load D3js -->
+    <script src="//d3plus.org/js/d3.js"></script>
+    
+    <!-- load D3plus after D3js -->
+    <script src="//d3plus.org/js/d3plus.js"></script>
+    
+    <script src="js/treemap.js"></script>
+    
+    <title>Criminal's weapon of choice</title>
+
+<style>
+
+	*{
+		font-family:sans-serif;
+	}
+	
+	.placeSvg{
+		position:relative;
+		max-width:1000px;
+		height:500px;
+		margin:0 auto;
+	}
+	
+	.text-center{
+		text-align:center;
+	}
+	
+	.loadingGif{
+		position:absolute;
+		top:35%;		
+	}
+	
+	#d3plus_group_HANDS_rect rect{
+		fill:#B4533E!important;
+		stoke:#AC4630!important;
+	}
+	#d3plus_group_HANDS_rect text{
+		fill:#fff!important;
+	}
+		
+	#d3plus_group_FIREARM_rect rect{
+		fill:#6E9344!important;
+		stroke:#5E7F3A!important;
+	}
+	#d3plus_group_FIREARM_rect text{
+		fill:#fff!important;
+	}
+	
+	#d3plus_group_OTHER_rect rect, #d3plus_group_KNIFE_rect rect{
+		fill:#3B8664!important;
+		stroke:#2E7A57!important;
+	}
+	#d3plus_group_OTHER_rect text, #d3plus_group_KNIFE_rect text{
+		fill:#fff!important;
+	}
+		
+</style>
+
+</head>
+
+<body>
+	
+   	<div class="container-fluid">
+
+        <ul class="pagination">
+          <li><a href="bargraph2.html">1</a></li>
+          <li class="active"><a href="treemap.html">2</a></li>
+          <li><a href="linegraph.html">3</a></li>
+          <li><a href="heatmap.html">4</a></li>
+          <li><a href="bargraph1.html">5</a></li>
+        </ul>
+
+	</div>
+    
+    <h2 class="text-center" style="margin-top:-10px;">Criminal's weapon of choice</h2>
+    
+    <center><img src="img/loading2.gif" width="100" class="loadingGif"></center>
+    
+    <!-- create container element for visualization -->
+    <div class="placeSvg"></div>
+</body>
+
+</html>
+
